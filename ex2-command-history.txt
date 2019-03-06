@@ -1,0 +1,314 @@
+    1  ls
+    2  ls -l
+    3  mkdir CIT173_Lab4
+    4  ls
+    5  ls -l /dev
+    6  ls -l /dev > ~/CIT173_Lab4/my-dev-nodes.txt
+    7  cd CIT173_Lab4/
+    8  ls
+    9  cat my-dev-nodes.txt | /dev/full
+   10  sudo cat my-dev-nodes.txt | /dev/full
+   11  cat my-dev-nodes.txt 
+   12  cat my-dev-nodes.txt > /dev/full
+   13  man head
+   14  head -c 1024 /dev/random > my-random-data.txt
+   15  cat my-random-data.txt 
+   16  lsmod
+   17  lsmod > my-modules-1.txt
+   18  cat my-modules-1.txt 
+   19  modinfo nfs
+   20  modinfo nfs > my-nfs-info.txt
+   21  ls
+   22  ls -l
+   23  modprobe nfs
+   24  modinfo nfs
+   25  modprobe /lib/modules/4.18.16-300.fc29.x86_64/kernel/fs/nfs/.ko
+   26  modprobe /lib/modules/4.18.16-300.fc29.x86_64/kernel/fs/nfs/
+   27  insmod nfs
+   28  ls
+   29  lsmod
+   30  cd ..
+   31  ls
+   32  sudo -i
+   33  pwd
+   34  cd /home
+   35  ls
+   36  cd scottmurray
+   37  pwd
+   38  ls
+   39  lsmod
+   40  modinfo nfs
+   41  modprobe nfs4
+   42  sudo modprobe nfs4
+   43  lsmod
+   44  lsmod | less
+   45  ls
+   46  cd CIT173_Lab4/
+   47  lsmod > my-modules-2.txt
+   48  sudo rmmod nfs4
+   49  lsmod
+   50  rmmod nfs4
+   51  rmmod nfs
+   52  sudo rmmod nfs
+   53  lsmod
+   54  lsmod > my-modules-3.txt
+   55  exit
+   56  gdisk
+   57  sudo /dev/sdb
+   58  sudo gdisk /dev/sdb
+   59  cat /dev
+   60  /dev
+   61  cd /dev
+   62  ls
+   63  ls -l
+   64  ls -l > ~/CIT173_Lab4/my-new-dev-nodes.txt
+   65  mkfs.ext4 /dev/sdb1
+   66  sudo mkfs.ext4 /dev/sdb1
+   67  sudo mkfs.ext4 /dev/sdb2
+   68  cd /mnt
+   69  ls
+   70  mkdir data
+   71  sudo mkdir data
+   72  sudo mkdir backup
+   73  ls
+   74  fsck.ext4 /dev/sdb1
+   75  sudo fsck.ext4 /dev/sdb1
+   76  sudo fsck.ext4 /dev/sdb2
+   77  sudo mount /dev/sdb1 /mnt/data
+   78  sudo mount /dev/sdb2 /mnt/backup/
+   79  mount
+   80  mount > ~/CIT173_Lab4/my-mounts.txt
+   81  df
+   82  df > ~/CIT173_Lab4/my-disk-usage.txt
+   83  umount /dev/sdb1
+   84  sudo umount /dev/sdb1
+   85  sudo umount /dev/sdb2
+   86  sudo dd if=/dev/sdb of=~/CIT173_Lab4/gpt.bin bs=512 count=34
+   87  cd ~/CIT173_Lab4/
+   88  git init
+   89  git remote add origin https://github.com/murrayse819/CIT173_Lab4.git
+   90  git add --all
+   91  git commit -m "Lab assignment 4"
+   92  git push origin master
+   93  cd ..
+   94  pwd
+   95  mkdir CIT173_Lab5
+   96  ls
+   97  /etc/fstab
+   98  sudo /etc/fstab
+   99  pwd
+  100  cat /etc/fstab
+  101  sudo cat /etc/fstab
+  102  cd mnt
+  103  cd /dev
+  104  ls
+  105  cd etc/fstab
+  106  cd /etc/fstab
+  107  cd /etc
+  108  ls
+  109  less ls
+  110  ls | less
+  111  cat fstab
+  112  cat cd ~/
+  113  cd ..
+  114  pwd
+  115  cd /home/scott
+  116  cd -
+  117  cd /home
+  118  ls
+  119  cd /scottmurray
+  120  cd ~/
+  121  pwd
+  122  sudo mount -a /etc/fstab /mnt/data
+  123  cd /mnt
+  124  ls
+  125  ls -l
+  126  cd /mnt
+  127  ls
+  128  history
+  129  cd ~/
+  130  mount
+  131  mount /dev/sdb1 /mnt/data
+  132  sudo mount /dev/sdb1 /mnt/data
+  133  mount
+  134  umount /mnt/data
+  135  sudo umount /mnt/data
+  136  mount
+  137  sudo /etc/fstab -a /deb/sdb1 /mnt/data
+  138  man fstab
+  139  libmount /etc/fstab
+  140  libmount
+  141  man libmount
+  142  cat fstab
+  143  cd /lib
+  144  ls
+  145  cd ..
+  146  cat /etc/fstab
+  147  ls /
+  148  ps
+  149  ps -a
+  150  ps -l
+  151  ps
+  152  ps --all
+  153  man ps
+  154  ps -e
+  155  cat /proc/699/status
+  156  ls cpu
+  157  lscpu
+  158  cat /proc/lscpu
+  159  cat /proc/modules
+  160  mount
+  161  cat /proc/mounts
+  162  cat /proc/version
+  163  uname
+  164  uname -a
+  165  cat /proc/version
+  166  man name
+  167  ls -l /sys
+  168  fdisk /dev/sdb
+  169  sudo fdisk /dev/sdb
+  170  df -Th
+  171  vi /etc/fstab
+  172  sudo nano /etc/fstab
+  173  nano /etc/fstab
+  174  sudo -E gedit /etc/fstab
+  175  cat /etc/fstab 
+  176  sudo -E gedit /etc/fstab
+  177  cat /etc/fstab 
+  178  exit
+  179  ls
+  180  mkdir CIT173_Lab6
+  181  groupadd actors
+  182  sudo groupadd actors
+  183  sudo groupadd directors
+  184  sudo groupadd producers
+  185  man useradd
+  186  sudo useradd -m mhamill -g actors
+  187  sudo useradd -m hford -g actors
+  188  sudo useradd -m cfisher -g actors
+  189  sudo useradd -m glucas -G directors,producers
+  190  sudo useradd -m gkurtz -g producers
+  191  sudo sudo passwd mhamill
+  192  sudo sudo passwd hford
+  193  sudo sudo passwd cfisher
+  194  sudo sudo passwd glucas
+  195  sudo sudo passwd gkurtz
+  196  cat /etc/passwd
+  197  cat /etc/groups
+  198  cd /etc
+  199  ls
+  200  cd ..
+  201  cat /etc/group
+  202  man usermod
+  203  sudo groupdel glucas
+  204  man usermod
+  205  sudo userdel glucas
+  206  sudo groupdel glucas
+  207  cat /etc/group
+  208  sudo useradd -m glucas -g directors,producers
+  209  man useradd
+  210  sudo useradd -m glucas -G directors,producers -N
+  211  cat /etc/group
+  212  sudo userdel glucas
+  213  cat /etc/group
+  214  sudo useradd -m glucas -g directors
+  215  cat /etc/users
+  216  cat /etc/passwd
+  217  sudo usermod -a -G producers glucas
+  218  cat /etc/passwd
+  219  sudo passwd glucas
+  220  cp /etc/passwd ~/CIT173_Lab6
+  221  cp /etc/group ~/CIT173_Lab6
+  222  ls ~/CIT173_Lab6
+  223  cat ~/CIT173_Lab6/group 
+  224  cat ~/CIT173_Lab6/passwd 
+  225  history > ~/CIT173_Lab6/exl-command-history.txt
+  226  ls ~/CIT173_Lab6
+  227  wget https://github.com/RenoTechnologyAcademy/CIT173_Lab6_Files/archive/master.tar.gz
+  228  sudo wget https://github.com/RenoTechnologyAcademy/CIT173_Lab6_Files/archive/master.tar.gz
+  229  ls
+  230  ls /home
+  231  ls -l
+  232  ls -l /home/scottmurray/
+  233  mv master.tar.gz /home/scottmurray/CIT173_Lab6
+  234  sudo mv master.tar.gz /home/scottmurray/CIT173_Lab6
+  235  ls
+  236  cd /home/scottmurray/CIT173_Lab6
+  237  ls
+  238  man tar
+  239  cat /etc/group
+  240  sudo usermod -a -G actors mhamill
+  241  cat /etc/group
+  242  sudo usermod -a -G actors hford
+  243  sudo usermod -a -G actors cfisher
+  244  sudo usermod -a -G directors glucas
+  245  sudo usermod -a -G producers glucas
+  246  sudo usermod -a -G producers gkurtz
+  247  cat /etc/groups
+  248  cat /etc/group
+  249  cp /etc/passwrd passwrd
+  250  cp /etc/passwd passwd
+  251  cp /etc/group group
+  252  ls
+  253  history > exl-command-history.txt 
+  254  mv exl-command-history.txt ex1-command-history.txt
+  255  ls
+  256  man tar
+  257  tar -xvzf master.tar.gz 
+  258  cd ../..
+  259  cd ..
+  260  ls
+  261  cd var
+  262  ls
+  263  mkdir StarWars
+  264  sudo mkdir StarWars
+  265  ls
+  266  ls -l
+  267  chmod a+w StarWars
+  268  sudo chmod a+w StarWars
+  269  ls -l
+  270  cd StarWars/
+  271  mkdir finance directing creative
+  272  ls -l /StarWars
+  273  cd StarWars
+  274  ls
+  275  cd ..
+  276  cd ~/
+  277  cd /home/scottmurray/CIT173_Lab6
+  278  ls
+  279  cd CIT173_Lab6_Files-master/
+  280  ls
+  281  ls -l
+  282  mv star-wars-budget.txt /var/StarWars/finance/
+  283  mv star-wars-journal.txt /var/StarWars/directing/
+  284  mv star-wars-script.txt /var/StarWars/creative/
+  285  ls -l /var/StarWars/
+  286  man chown
+  287  chown -R gkurtz:producers /var/StarWars/finance/
+  288  sudo chown -R gkurtz:producers /var/StarWars/finance/
+  289  ls -l /var/StarWars/finance/
+  290  chmod u+x g+x g-w o-r /var/StarWars/finance/
+  291  chmod -R u+x /var/StarWars/finance/
+  292  sudo chmod -R u+x /var/StarWars/finance/
+  293  ls -l /var/StarWars/finance/
+  294  sudo chmod -R g+x /var/StarWars/finance/
+  295  ls -l /var/StarWars/finance/
+  296  sudo chmod -R g-w /var/StarWars/finance/
+  297  sudo chmod -R o-r /var/StarWars/finance/
+  298  ls -l /var/StarWars/finance/
+  299  sudo ls -l /var/StarWars/finance/
+  300  sudo chown -R glucas:directors /var/StarWars/directing/
+  301  ls -l /var/StarWars/directing/
+  302  man chmod
+  303  info chmod
+  304  chmod -R 775 /var/StarWars/directing/
+  305  sudo chmod -R 775 /var/StarWars/directing/
+  306  ls -l /var/StarWars/directing/
+  307  chown -R glucas:actors /var/StarWars/creative/
+  308  sudo chown -R glucas:actors /var/StarWars/creative/
+  309  ls -l /var/StarWars/creative/
+  310  sudo chmod -R 750 /var/StarWars/creative/
+  311  ls -l /var/StarWars/creative/
+  312  sudo ls -l /var/StarWars/creative/
+  313  cd ..
+  314  history > ex2-command-history.txt
